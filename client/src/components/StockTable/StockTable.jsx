@@ -4,10 +4,11 @@ import {
   Table,
   TableBody,
   TableRow,
-  TableRowColumn,
   TableHeader,
   TableHeaderColumn,
 } from 'material-ui/Table'
+
+import StockTableRow from './StockTableRow'
 
 const StockTable = () => (
   <MuiThemeProvider>
@@ -24,14 +25,7 @@ const StockTable = () => (
       </TableHeader>
 
       <TableBody displayRowCheckbox={false}>
-        <TableRow>
-          <TableRowColumn>Code</TableRowColumn>
-          <TableRowColumn>Company</TableRowColumn>
-          <TableRowColumn>Price</TableRowColumn>
-          <TableRowColumn>Value</TableRowColumn>
-          <TableRowColumn>Change</TableRowColumn>
-          <TableRowColumn>% Change</TableRowColumn>
-        </TableRow>
+        <StockTableRow />
       </TableBody>
     </Table>
   </MuiThemeProvider>
