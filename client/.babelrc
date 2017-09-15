@@ -1,0 +1,9 @@
+{
+  "presets": [
+    ["env", {
+      "useBuiltIns": true,
+      "modules": false
+    }]
+  ],
+  "comments": true
+}
