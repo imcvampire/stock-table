@@ -9,7 +9,7 @@ const StockTableRow = ({
   code,
   company,
   price,
-  value,
+  number,
   change,
   percentage,
 }) => (
@@ -17,7 +17,7 @@ const StockTableRow = ({
     <TableRowColumn>{ code }</TableRowColumn>
     <TableRowColumn>{ company }</TableRowColumn>
     <TableRowColumn>{ price }</TableRowColumn>
-    <TableRowColumn>{ value }</TableRowColumn>
+    <TableRowColumn>{ Math.round(price * number) }</TableRowColumn>
     <TableRowColumn>{ change }</TableRowColumn>
     <TableRowColumn>{ percentage }%</TableRowColumn>
   </TableRow>
@@ -27,7 +27,7 @@ StockTableRow.propTypes = {
   code: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
+  number: PropTypes.number.isRequired,
   change: PropTypes.number.isRequired,
   percentage: PropTypes.number.isRequired,
 }

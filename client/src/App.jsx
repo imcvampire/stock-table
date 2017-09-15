@@ -7,7 +7,7 @@ const App = () => (
   <BrowserRouter>
     <div>
       <Navbar />
-      <StockTable />
+      <StockTable stockList={[]} />
     </div>
   </BrowserRouter>
 )
