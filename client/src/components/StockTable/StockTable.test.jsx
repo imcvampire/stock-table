@@ -4,18 +4,18 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import {
   TableHeaderColumn,
 } from 'material-ui/Table'
-import StockTableHeader from './StockTableHeader'
+import StockTable from './StockTable'
 
-describe('<NavbarTabs />', () => {
+describe('<StockTable />', () => {
   const muiTheme = getMuiTheme()
   const shallowWithContext = node => shallow(node, { context: { muiTheme } })
 
   it('renders without crashing', () => {
-    shallowWithContext(<StockTableHeader />)
+    shallowWithContext(<StockTable />)
   })
 
   it('has enough tab', () => {
-    const wrapper = shallowWithContext(<StockTableHeader />)
+    const wrapper = shallowWithContext(<StockTable />)
     expect(wrapper.find(TableHeaderColumn).map(node => node.props().children)).toEqual([
       'Code',
       'Company',

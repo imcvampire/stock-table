@@ -1,13 +1,14 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Navbar from './components/Navbar'
+import StockTable from './components/StockTable'
 
 const App = () => (
   <BrowserRouter>
-    <MuiThemeProvider>
+    <div>
       <Navbar />
-    </MuiThemeProvider>
+      <StockTable />
+    </div>
   </BrowserRouter>
 )
 
