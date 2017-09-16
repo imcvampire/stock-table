@@ -8,7 +8,7 @@
     "plugin:node/recommended"
   ],
   "env": {
-    "jest/globals": true
+    "jest": true
   },
   "rules": {
     "node/exports-style": [

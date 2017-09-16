@@ -1,3 +1,5 @@
+const getRandomNumber = require('../utils/getRandomNumber')
+
 function makeCode(charCode = 3, charExchange = 2) {
   let text = ''
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -23,8 +25,6 @@ function makeCompany(length = 20) {
 
   return text
 }
-
-const getRandomNumber = (min, max) => Math.random() * (max - min) + min
 
 /**
  * Init data
