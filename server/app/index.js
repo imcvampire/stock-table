@@ -1,7 +1,7 @@
 const app = require('http').createServer()
 const io = require('socket.io')(app)
 
-const { initData } = require('./data')
+const initData = require('./data/initData')
 
 const stockList = initData()
 
