@@ -12,11 +12,9 @@
   "license": "ISC",
   "jest": {
     "collectCoverageFrom": [
-      "server.js",
       "app/**/*.js"
     ],
     "testMatch": [
-      "server.(spec|test).js",
       "<rootDir>/app/**/__tests__/**/*.js?(x)",
       "<rootDir>/app/**/?(*.)(spec|test).js?(x)"
     ]
