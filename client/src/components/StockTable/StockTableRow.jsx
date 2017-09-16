@@ -5,6 +5,8 @@ import {
   TableRowColumn,
 } from 'material-ui/Table'
 
+const numberFormat = new Intl.NumberFormat()
+
 const StockTableRow = ({
   code,
   company,
@@ -16,10 +18,10 @@ const StockTableRow = ({
   <TableRow>
     <TableRowColumn>{ code }</TableRowColumn>
     <TableRowColumn>{ company }</TableRowColumn>
-    <TableRowColumn>{ price }</TableRowColumn>
-    <TableRowColumn>{ Math.round(price * number) }</TableRowColumn>
-    <TableRowColumn>{ change }</TableRowColumn>
-    <TableRowColumn>{ percentage }%</TableRowColumn>
+    <TableRowColumn>{ numberFormat.format(price) }</TableRowColumn>
+    <TableRowColumn>{ numberFormat.format(Math.round(price * number)) }</TableRowColumn>
+    <TableRowColumn>{ numberFormat.format(change) }</TableRowColumn>
+    <TableRowColumn>{ numberFormat.format(percentage) }%</TableRowColumn>
   </TableRow>
 )
 
