@@ -47,7 +47,7 @@ function initData(number = 30) {
     while (stockList.map(({ code }) => code).includes(code)) code = makeCode()
 
     stockList.push({
-      code: makeCode(),
+      code,
       company: makeCompany(),
       price: Number(getRandomNumber(0.01, 99.99).toFixed(2)),
       volumn: Math.round(getRandomNumber(1000, 1000000)),
