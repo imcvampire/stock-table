@@ -2,18 +2,36 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "server.js",
   "scripts": {
+    "start": "node server",
     "test": "jest"
   },
   "author": "imcvampire",
   "license": "ISC",
+  "jest": {
+    "collectCoverageFrom": [
+      "server.js",
+      "app/**/*.js"
+    ],
+    "testMatch": [
+      "server.(spec|test).js",
+      "<rootDir>/app/**/__tests__/**/*.js?(x)",
+      "<rootDir>/app/**/?(*.)(spec|test).js?(x)"
+    ]
+  },
   "dependencies": {
+    "eslint-plugin-jest": "^21.1.0",
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
+    "babel-jest": "^21.0.2",
     "eslint": "^4.7.0",
-    "eslint-plugin-node": "^5.1.1"
+    "eslint-plugin-node": "^5.1.1",
+    "jest": "^21.1.0",
+    "supertest": "^3.0.0",
+    "supertest-as-promised": "^4.0.2"
   },
   "engines": {
     "node": "^8.5.0"

@@ -1,7 +1,19 @@
 {
-  "plugins": ["node"],
-  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "plugins": [
+    "node",
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
+  "env": {
+    "jest/globals": true
+  },
   "rules": {
-    "node/exports-style": ["error", "module.exports"],
+    "node/exports-style": [
+      "error",
+      "module.exports"
+    ]
   }
 }
