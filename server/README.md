@@ -23,6 +23,7 @@ npm start
 
 ## How to test:
 
-```
-npm test
-```
+In watch mode: `npm run test`
+
+In coverage mode: `npm run test:coverage`
+

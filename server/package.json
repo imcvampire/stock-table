@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "test": "jest --coverage"
+    "test": "NODE_ENV=test jest --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage"
   },
   "author": "imcvampire",
   "license": "ISC",
