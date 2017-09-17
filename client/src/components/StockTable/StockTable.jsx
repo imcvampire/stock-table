@@ -39,7 +39,7 @@ StockTable.propTypes = {
     code: PropTypes.string.isRequired,
     company: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    number: PropTypes.number.isRequired,
+    volume: PropTypes.number.isRequired,
     change: PropTypes.number.isRequired,
     percentage: PropTypes.number.isRequired,
   })).isRequired,
