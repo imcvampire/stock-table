@@ -17,10 +17,6 @@
     "testMatch": [
       "<rootDir>/app/**/__tests__/**/*.js?(x)",
       "<rootDir>/app/**/?(*.)(spec|test).js?(x)"
-    ],
-    "moduleFileExtensions": [
-      "json",
-      "js"
     ]
   },
   "dependencies": {
