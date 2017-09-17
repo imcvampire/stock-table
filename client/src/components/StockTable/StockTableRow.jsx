@@ -28,10 +28,18 @@ const StockTableRow = ({
   percentage,
 }) => (
   <TableRow>
-    <TableRowColumn style={styles.code}>{ code }</TableRowColumn>
-    <TableRowColumn>{ company }</TableRowColumn>
-    <TableRowColumn>{ numberFormat.format(price) }</TableRowColumn>
-    <TableRowColumn>{ numberFormat.format(Math.round(price * volume)) }</TableRowColumn>
+    <TableRowColumn style={styles.code}>
+      { code }
+    </TableRowColumn>
+    <TableRowColumn>
+      { company }
+    </TableRowColumn>
+    <TableRowColumn>
+      { numberFormat.format(price) }
+    </TableRowColumn>
+    <TableRowColumn>
+      { numberFormat.format(Math.round(price * volume)) }
+    </TableRowColumn>
     <TableRowColumn style={change >= 0 ? styles.changeUp : styles.changeDown}>
       { numberFormat.format(change) }
     </TableRowColumn>
