@@ -33,7 +33,7 @@ function makeCompany(length = 20) {
  * @property {String} code
  * @property {String} company
  * @property {Number} price
- * @property {Number} volumn
+ * @property {Number} volume
  *
  * @param {Number} number
  * @return {Array.<Stock>} List of stocks
@@ -50,7 +50,7 @@ function initData(number = 30) {
       code,
       company: makeCompany(),
       price: Number(getRandomNumber(0.01, 99.99).toFixed(2)),
-      volumn: Math.round(getRandomNumber(1000, 1000000)),
+      volume: Math.round(getRandomNumber(1000, 1000000)),
     })
   })
 

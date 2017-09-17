@@ -7,7 +7,7 @@ function updateData(stockList) {
     // Jest doesn't play nice with rest properties
     return Object.assign({}, stock, {
       price: Number((stock.price + getRandomNumber(-priceDiffLimit, priceDiffLimit)).toFixed(2)),
-      volumn: stock.volumn + Math.round(getRandomNumber(10, 30)),
+      volume: stock.volume + Math.round(getRandomNumber(10, 30)),
     })
   })
 }

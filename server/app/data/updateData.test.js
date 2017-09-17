@@ -2,8 +2,8 @@ const updateData = require('./updateData')
 
 describe('update', () => {
   const stockList = [
-    { price: 1001.88, volumn: 10013, code: 'AAA.XX', company: 'NQA' },
-    { price: 100, volumn: 20000, code: 'BBB.YY', company: 'Quant Edge' },
+    { price: 1001.88, volume: 10013, code: 'AAA.XX', company: 'NQA' },
+    { price: 100, volume: 20000, code: 'BBB.YY', company: 'Quant Edge' },
   ]
 
   it('still has same length', () => {
@@ -30,9 +30,9 @@ describe('update', () => {
   it('volumn changes in range + [10, 30]', () => {
     const newStockList = updateData(stockList)
 
-    newStockList.forEach(({ volumn }, index) => {
-      expect(volumn).toBeGreaterThanOrEqual(stockList[index].volumn + 10)
-      expect(volumn).toBeLessThanOrEqual(stockList[index].volumn + 30)
+    newStockList.forEach(({ volume }, index) => {
+      expect(volume).toBeGreaterThanOrEqual(stockList[index].volume + 10)
+      expect(volume).toBeLessThanOrEqual(stockList[index].volume + 30)
     })
   })
 })

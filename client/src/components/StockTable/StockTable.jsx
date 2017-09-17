@@ -27,7 +27,7 @@ const StockTable = ({ stockList }) => (
 
       <TableBody displayRowCheckbox={false}>
         {
-          stockList.map(stock => (<StockTableRow {...stock} key={stock.toString()} />))
+          stockList.map(stock => (<StockTableRow {...stock} key={stock.code} />))
         }
       </TableBody>
     </Table>
