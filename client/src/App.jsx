@@ -29,14 +29,16 @@ class App extends React.Component {
           percentage: 0,
         })),
       }), () => {
-        this.state.socket.on('data', (newData) => {
-          this.setState(prevState => ({
-            ...prevState,
-            newData: calDiff(prevState.initData, newData),
-          }))
-        })
+        this.state.socket.on('data', this.updateData.bind(this))
       })
     })
+  }
+
+  updateData(data) {
+    this.setState(prevState => ({
+      ...prevState,
+      newData: calDiff(prevState.initData, data),
+    }))
   }
 
   render() {
