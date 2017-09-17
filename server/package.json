@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "imcvampire",
   "license": "ISC",
