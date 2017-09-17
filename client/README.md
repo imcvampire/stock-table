@@ -46,6 +46,6 @@ performance.
 > A: I use [Intl](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl) API in this app. 
 Right now, it isn't available in iOS 9 and below, but I'm too lazy to include 1 polyfill so sorry ...
 
-> Q: App isn't show any data?
+> Q: App doesn't show any data?
 >
 > A: You need to start server first. 
