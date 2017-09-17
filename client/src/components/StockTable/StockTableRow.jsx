@@ -7,6 +7,18 @@ import {
 
 const numberFormat = new Intl.NumberFormat()
 
+const styles = {
+  code: {
+    color: 'blue',
+  },
+  changeUp: {
+    color: 'green',
+  },
+  changeDown: {
+    color: 'red',
+  },
+}
+
 const StockTableRow = ({
   code,
   company,
@@ -16,12 +28,16 @@ const StockTableRow = ({
   percentage,
 }) => (
   <TableRow>
-    <TableRowColumn>{ code }</TableRowColumn>
+    <TableRowColumn style={styles.code}>{ code }</TableRowColumn>
     <TableRowColumn>{ company }</TableRowColumn>
     <TableRowColumn>{ numberFormat.format(price) }</TableRowColumn>
     <TableRowColumn>{ numberFormat.format(Math.round(price * volume)) }</TableRowColumn>
-    <TableRowColumn>{ numberFormat.format(change) }</TableRowColumn>
-    <TableRowColumn>{ numberFormat.format(percentage) }%</TableRowColumn>
+    <TableRowColumn style={change >= 0 ? styles.changeUp : styles.changeDown}>
+      { numberFormat.format(change) }
+    </TableRowColumn>
+    <TableRowColumn style={change >= 0 ? styles.changeUp : styles.changeDown}>
+      { numberFormat.format(percentage) }%
+    </TableRowColumn>
   </TableRow>
 )
 

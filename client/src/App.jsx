@@ -6,6 +6,7 @@ import clone from 'clone'
 import Navbar from './components/Navbar'
 import StockTable from './components/StockTable'
 import calDiff from './utils/calDiff'
+import getTop from './utils/getTop'
 
 class App extends React.Component {
   constructor() {
@@ -28,7 +29,7 @@ class App extends React.Component {
           percentage: 0,
         })),
       }), () => {
-        this.state.socket.once('data', (newData) => {
+        this.state.socket.on('data', (newData) => {
           this.setState(prevState => ({
             ...prevState,
             newData: calDiff(prevState.initData, newData),
@@ -49,14 +50,14 @@ class App extends React.Component {
               exact
               path="/gainer/top"
               render={() => (
-                <StockTable stockList={this.state.newData} />
+                <StockTable stockList={getTop(this.state.newData)} />
               )}
             />
             <Route
               exact
               path="/loser/top"
               render={() => (
-                <StockTable stockList={this.state.newData} />
+                <StockTable stockList={getTop(this.state.newData, false)} />
               )}
             />
             <Redirect to="/gainer/top" />

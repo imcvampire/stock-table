@@ -7,7 +7,7 @@ const props = {
   code: 'ABC.XY',
   company: 'NQA JSC',
   price: 55.11,
-  number: 120,
+  volume: 120,
   change: 2,
   percentage: 6,
 }
