@@ -1,5 +1,5 @@
 /**
- * Get random number between min and max
+ * Get a random number between min and max
  * @param {Number} min
  * @param {Number} max
  * @return {Number}
